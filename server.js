@@ -9,7 +9,7 @@ app.use(cors());
 
 // 1. MySQL Connection Configuration (REPLACE WITH YOUR ACTUAL CREDENTIALS)
 const connection = mysql.createConnection({
-  host: 'jotirling.ddns.net',
+  host: 'localhost',
   user: 'mydatabase',     // <-- IMPORTANT: Replace with your MySQL username
   password: 'mydatabase', // <-- IMPORTANT: Replace with your MySQL password
   database: 'mydatabase',   // <-- IMPORTANT: Replace with your database name
@@ -50,6 +50,6 @@ app.get('/api/word', (req, res) => {
 
 const port = process.env.PORT || 3000;
 
-app.listen(port, '0.0.0.0', () => {
+app.listen(port, 'localhost', () => {
   console.log(`Server is running on port ${port}`);
 });
